@@ -60,8 +60,8 @@ from sklearn.preprocessing import StandardScaler  # Importing StandardScaler for
 # (BBG Bank) dataset La Banca Central Bank
 
 # Upload data from CSV files
-fraud_1_df = pd.read_csv(r"C:\Users\brand\OneDrive - SNHU\Module 7 Project 3\FraudDatasetSubset_1.csv")
-fraud_2_df = pd.read_csv(r"C:\Users\brand\OneDrive - SNHU\Module 7 Project 3\FraudDatasetSubset_2.csv")
+fraud_1_df = pd.read_csv('data\FraudDatasetSubset_1.csv')
+fraud_2_df = pd.read_csv('data\FraudDatasetSubset_2.csv")
 
 # Merge the two datasets on the 'nameOrig' column
 fraud_merged = fraud_1_df.merge(fraud_2_df, left_on='nameOrig', right_on='nameOrig')
