@@ -44,8 +44,40 @@ pip install pandas numpy seaborn scikit-learn imbalanced-learn matplotlib
 - Calculate accuracy, precision, recall, and f1-score for each model.
 
 **Code (Python)**
-```python
 libraries and packages for this project for data analysis and machine learning. These include pandas for data manipulation, numpy for numerical computations, seaborn for data visualization, scikit-learn for machine learning models such as LogisticRegression and DecisionTreeClassifier, matplotlib for plotting, and imblearn for addressing imbalanced datasets using techniques like SMOTE and RandomUnderSampler. Additionally, the code utilizes train_test_split for splitting the dataset and StandardScaler for standardizing features. These libraries and packages play a crucial role in the data preprocessing, modeling, and evaluation processes.
+```python
+import pandas as pd  # Importing the pandas library for data manipulation and analysis
+import numpy as np  # Importing the numpy library for numerical operations
+import seaborn as sns  # Importing the seaborn library for data visualization
+from sklearn.linear_model import LogisticRegression  # Importing Logistic Regression model from scikit-learn
+from sklearn.tree import DecisionTreeClassifier  # Importing Decision Tree Classifier from scikit-learn
+import matplotlib.pyplot as plt  # Importing the matplotlib library for plotting
+from imblearn.over_sampling import SMOTE  # Importing SMOTE for handling imbalanced datasets
+from imblearn.under_sampling import RandomUnderSampler  # Importing RandomUnderSampler for handling imbalanced datasets
+from sklearn.model_selection import train_test_split  # Importing train_test_split for splitting data into training and testing sets
+from sklearn.preprocessing import StandardScaler  # Importing StandardScaler for feature scaling
+
+# (BBG Bank) dataset La Banca Central Bank
+
+# Upload data from CSV files
+fraud_1_df = pd.read_csv(r"C:\Users\brand\OneDrive - SNHU\Module 7 Project 3\FraudDatasetSubset_1.csv")
+fraud_2_df = pd.read_csv(r"C:\Users\brand\OneDrive - SNHU\Module 7 Project 3\FraudDatasetSubset_2.csv")
+
+# Merge the two datasets on the 'nameOrig' column
+fraud_merged = fraud_1_df.merge(fraud_2_df, left_on='nameOrig', right_on='nameOrig')
+
+# Fill all missing values with 0s
+fraud_merged.fillna(0, inplace=True)
+
+# Print the original and merged dataset sizes
+print(f'Original sizes: fraud_1_df={fraud_1_df.shape}, fraud_2_df={fraud_2_df.shape}; Merged size: fraud_merged={fraud_merged.shape}')
+
+# Display the first 5 rows of the original datasets
+fraud_1_df.head()
+fraud_2_df.head()
+
+# Print the first 10 rows of the merged dataset
+fraud_merged.head(10)
 ```
 
 **Results**
