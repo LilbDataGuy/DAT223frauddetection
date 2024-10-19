@@ -44,7 +44,7 @@ pip install pandas numpy seaborn scikit-learn imbalanced-learn matplotlib
 - Calculate accuracy, precision, recall, and f1-score for each model.
 
 **Code (Python)**
-libraries and packages for this project for data analysis and machine learning. These include pandas for data manipulation, numpy for numerical computations, seaborn for data visualization, scikit-learn for machine learning models such as LogisticRegression and DecisionTreeClassifier, matplotlib for plotting, and imblearn for addressing imbalanced datasets using techniques like SMOTE and RandomUnderSampler. Additionally, the code utilizes train_test_split for splitting the dataset and StandardScaler for standardizing features. These libraries and packages play a crucial role in the data preprocessing, modeling, and evaluation processes.
+libraries and packages for this project for data analysis and machine learning. These include pandas for data manipulation, numpy for numerical computations, seaborn for data visualization, scikit-learn for machine learning models such as LogisticRegression and DecisionTreeClassifier, matplotlib for plotting, and imblearn for addressing imbalanced datasets using techniques like SMOTE and RandomUnderSampler. Additionally, the code utilizes train_test_split for splitting the dataset and StandardScaler for standardizing features. These libraries and packages play a fundamental role in the data preprocessing, modeling, and evaluation processes.
 ```python
 import pandas as pd  # Importing the pandas library for data manipulation and analysis
 import numpy as np  # Importing the numpy library for numerical operations
